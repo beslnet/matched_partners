@@ -11,21 +11,20 @@ Instrucciones para probar:
 4. Luego ir consola, rails c, y dentro crear dos usuarios.
 
 
-<pre>
+
 alicia = User.create!(name: "Alicia")
 javier = User.create!(name: "Javier")
-</pre>
+
 
 Luego ejecutar las asociaciones:
 
-<pre>
 alicia.matched_users << javier 
 alicia.matched_users #debería mostrar el objeto que tiene a javier porque lo emparejó
 javier.matched_users #debería mostrar a alicia
-</pre>
 
-<pre>
+
+
 alicia.matched_users.destroy_all
-</pre>
+
 
 Con lo anterior deberían ambos quedar "desligados".
